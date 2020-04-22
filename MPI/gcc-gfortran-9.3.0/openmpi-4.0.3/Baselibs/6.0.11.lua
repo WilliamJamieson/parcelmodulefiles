@@ -6,7 +6,7 @@
 -- ]]
 
 family("Baselibs")
---prereq("gcc-gfortran/9.3.0", "openmpi/4.0.3")
+prereq("Core/gcc-gfortran/9.3.0", "Compiler/gcc-gfortran-9.3.0/openmpi/4.0.3")
 
 local compilername = "gcc-gfortran-9.3.0"
 local mpiname = "openmpi-4.0.3"

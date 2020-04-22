@@ -10,7 +10,7 @@
 -- ]]
 
 family("MPI")
-prereq("gcc-gfortran/9.3.0")
+prereq("Core/gcc-gfortran/9.3.0")
 
 local compilername = "gcc-gfortran-9.3.0"
 

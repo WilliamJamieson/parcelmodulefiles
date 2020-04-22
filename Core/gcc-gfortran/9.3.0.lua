@@ -19,15 +19,9 @@
 
 family("Compiler")
 
-<<<<<<< HEAD:Core/gcc-gfortran/9.3.0.lua
 local version = "9.3.0"
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed/Core/gcc-gfortran")
-=======
-local version = "8.3.0"
-local homedir = os.getenv("HOME")
-local installdir = pathJoin(homedir, "installed/Core/gcc-gfortran")
->>>>>>> dfc8c03... Updates to work with my system:Core/gcc-gfortran/8.3.0.lua
 local pkgdir = pathJoin(installdir,version)
 local bindir = pathJoin(pkgdir,"bin")
 
