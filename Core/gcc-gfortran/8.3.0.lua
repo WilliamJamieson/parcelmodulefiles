@@ -15,7 +15,8 @@
 family("Compiler")
 
 local version = "8.3.0"
-local installdir = "/Users/mathomp4/installed/Core/gcc-gfortran"
+local homedir = os.getenv("HOME")
+local installdir = pathJoin(homedir, "installed/Core/gcc-gfortran")
 local pkgdir = pathJoin(installdir,version)
 local bindir = pathJoin(pkgdir,"bin")
 
