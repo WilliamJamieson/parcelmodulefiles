@@ -13,7 +13,7 @@
 --
 -- Then, in a build directory:
 --
--- ../gcc-9.1.0/configure --prefix=/Users/mathomp4/installed/Core/gcc-gfortran/9.1.0-820loaded --enable-languages=c,c++,fortran --disable-multilib |& tee configure.log
+-- ../gcc-9.1.0/configure --prefix=$HOME/installed/Core/gcc-gfortran/9.1.0-820loaded --enable-languages=c,c++,fortran --disable-multilib |& tee configure.log
 -- make -j4 |& tee make.log
 -- make install |& tee makeinstall.log
 -- make check |& tee makecheck.log

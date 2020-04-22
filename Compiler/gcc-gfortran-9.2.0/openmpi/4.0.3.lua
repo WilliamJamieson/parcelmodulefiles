@@ -1,20 +1,20 @@
 -- [[
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=clang CXX=clang++ FC=/Users/mathomp4/installed/Core/gcc-gfortran/9.2.0-820loaded/bin/gfortran --prefix=/Users/mathomp4/installed/Compiler/clang-gfortran-9.2.0/openmpi/4.0.1 |& tee configure.clang-gfortran-9.2.0.log
--- $ mv config.log config.clang-gfortran-9.2.0.log
--- $ make -j4 |& tee make.clang-gfortran-9.2.0.log
--- $ make install |& tee makeinstall.clang-gfortran-9.2.0.log
--- $ make check |& tee makecheck.clang-gfortran-9.2.0.log
+-- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-9.2.0/openmpi/4.0.3 |& tee configure.gcc-gfortran-9.2.0.log
+-- $ mv config.log config.gcc-gfortran-9.2.0.log
+-- $ make -j4 |& tee make.gcc-gfortran-9.2.0.log
+-- $ make install |& tee makeinstall.gcc-gfortran-9.2.0.log
+-- $ make check |& tee makecheck.gcc-gfortran-9.2.0.log
 --
 -- ]]
 
 family("MPI")
-prereq("clang-gfortran/9.2.0")
+prereq("Core/gcc-gfortran/9.2.0")
 
-local compilername = "clang-gfortran-9.2.0"
+local compilername = "gcc-gfortran-9.2.0"
 
-local version = "4.0.1"
+local version = "4.0.3"
 local compiler = pathJoin("Compiler",compilername)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
@@ -22,7 +22,7 @@ local pkgdir = pathJoin(installdir,compiler,"openmpi",version)
 
 -- Setup Modulepath for packages built by this MPI stack
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir = pathJoin(mroot,"MPI/clang-gfortran-9.2.0",("openmpi-"..version))
+local mdir = pathJoin(mroot,"MPI/gcc-gfortran-9.2.0",("openmpi-"..version))
 prepend_path("MODULEPATH", mdir)
 
 setenv("OPENMPI",pkgdir)

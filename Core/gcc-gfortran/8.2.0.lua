@@ -6,7 +6,7 @@
 --
 -- Then, in a build directory:
 --
--- ../gcc-8.2.0/configure --prefix=/Users/mathomp4/installed/Core/gcc-gfortran/8.2.0 --enable-languages=c,c++,fortran --disable-multilib | & tee configure.log
+-- ../gcc-8.2.0/configure --prefix=$HOME/installed/Core/gcc-gfortran/8.2.0 --enable-languages=c,c++,fortran --disable-multilib | & tee configure.log
 --
 
 family("Compiler")
